@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Results</title>
+</head>
+<body>
+    <h1>OCR Results</h1>
+    
+    <h2>Imagen con Rectángulos</h2>
+    <img src="{{ image_path }}" alt="Processed Image" style="max-width: 100%; height: auto;">
+    
+    <h2>Palabras Encontradas</h2>
+    <ul>
+        {% for res in result %}
+            <li>{{ res[1] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
